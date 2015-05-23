@@ -5,7 +5,8 @@ var highlightSection = require('./src/highlight-section');
 
 var codeDumpParser = require('v8-code-dump-parser'),
     helpVersion = require('help-version')(usage()),
-    concat = require('parse-concat-stream');
+    concat = require('parse-concat-stream'),
+    normalizeCss = require('normalize-css/normalize');
 
 var fs = require('fs');
 
@@ -29,6 +30,7 @@ function usage() {
 
     process.stdout.write([
       '<style>',
+      normalizeCss,
       fs.readFileSync(require.resolve('highlight.js/styles/solarized_dark.css'),
                       { encoding: 'utf8' }),
       '</style>',
