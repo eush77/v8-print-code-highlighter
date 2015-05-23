@@ -1,0 +1,38 @@
+{
+  "name": "v8-print-code-highlighter",
+  "version": "0.0.0",
+  "description": "Dual JavaScript + ASM syntax highlighter for --print-code V8 dumps",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "v8-print-code-highlighter": "cli.js"
+  },
+  "homepage": "https://github.com/eush77/v8-print-code-highlighter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/v8-print-code-highlighter"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/v8-print-code-highlighter/issues"
+  },
+  "keywords": [
+    "v8",
+    "dump",
+    "asm",
+    "javascript",
+    "syntax",
+    "highlighter",
+    "highlight",
+    "source",
+    "code",
+    "optimized",
+    "unoptimized",
+    "cli",
+    "print"
+  ],
+  "dependencies": {
+    "v8-code-dump-parser": "^0.1.0"
+  },
+  "devDependencies": {}
+}
