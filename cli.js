@@ -27,6 +27,14 @@ function usage() {
 
     sections.forEach(highlightSection);
 
-    process.stdout.write(codeDumpParser.stringify(sections));
+    process.stdout.write([
+      '<style>',
+      fs.readFileSync(require.resolve('highlight.js/styles/solarized_dark.css'),
+                      { encoding: 'utf8' }),
+      '</style>',
+      '<pre class="hljs">',
+      codeDumpParser.stringify(sections),
+      '</pre>'
+    ].join(''));
   }));
 }(process.argv.slice(2)));

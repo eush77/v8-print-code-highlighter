@@ -37,6 +37,7 @@
   ],
   "dependencies": {
     "help-version": "^0.2.0",
+    "highlight.js": "^8.6.0",
     "parse-concat-stream": "^0.2.0",
     "v8-code-dump-parser": "^0.1.0"
   },
