@@ -8,6 +8,10 @@
   "bin": {
     "v8-print-code-highlighter": "cli.js"
   },
+  "files": [
+    "cli.js",
+    "src/"
+  ],
   "homepage": "https://github.com/eush77/v8-print-code-highlighter",
   "repository": {
     "type": "git",
