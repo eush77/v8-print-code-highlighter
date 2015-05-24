@@ -12,6 +12,7 @@ var fs = require('fs'),
 
 var writeStyles = function (theme, out) {
   out.write(normalizeCss);
+  out.write('pre { margin: 0; }');
 
   var themeFile = require.resolve(path.join('highlight.js/styles', theme + '.css'));
   fs.createReadStream(themeFile, { encoding: 'utf8' })
