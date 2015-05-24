@@ -36,6 +36,13 @@ Spits out highlighted HTML. Use [bcat][bcat] or something similar to redirect th
 
 [bcat]: http://rtomayko.github.io/bcat/
 
+## Themes
+
+All the themes come from [highlight.js][hljs] project. Check out its [demo page][demo] for comparison.
+
+[hljs]: https://highlightjs.org/
+[demo]: https://highlightjs.org/static/demo/
+
 ## TODO
 
 - Add ANSI output format (for the terminal).
