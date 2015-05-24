@@ -17,8 +17,14 @@ module.exports = function (section) {
 
   var code;
   if (code = section.code || section.optimizedCode) {
-    var asm = hljs.highlightAuto(code.instructions, asmLanguages);
+    var asmStart = code.instructions.indexOf('\n') + 1;
+    var headerLine = code.instructions.slice(0, asmStart);
+    var asm = code.instructions.slice(asmStart);
+
+    asm = hljs.highlightAuto(asm, asmLanguages);
+
     code.instructions = [
+      headerLine,
       '<code class="', asm.language, '">',
       asm.value,
       '</code>'
