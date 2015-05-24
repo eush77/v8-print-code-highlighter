@@ -38,6 +38,17 @@ Spits out highlighted HTML. Use [bcat][bcat] or something similar to redirect th
 
 [bcat]: http://rtomayko.github.io/bcat/
 
+## API
+
+### `printCodeHighlighter(sections, opts)`
+
+- `sections` — parse tree in [v8-code-dump-parser][v8-code-dump-parser] format. Note that current implementation rewrites sections' content along the way.
+- `opts.theme` — optional theme name.
+
+Returns readable stream of HTML markup and styles.
+
+[v8-code-dump-parser]: https://github.com/eush77/v8-code-dump-parser
+
 ## Themes
 
 All the themes come from [highlight.js][hljs] project. Check out its [demo page][demo] for comparison.
