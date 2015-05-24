@@ -23,6 +23,8 @@ Be forewarned though, those logs can be huge. You can use [v8-print-code-filter]
 $ d8 --print-code samples/source.js |v8-print-code-filter --name exports.inherits |v8-print-code-highlighter -t solarized_dark |bcat
 ```
 
+![screenshot](screenshot.png)
+
 ## CLI
 
 ```
