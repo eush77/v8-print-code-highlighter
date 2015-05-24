@@ -12,7 +12,7 @@ Dual syntax highlighter for `--print-code` / `--print-opt-code` V8 dumps. Highli
 ## CLI
 
 ```
-v8-print-code-highlighter [file]
+Usage:  v8-print-code-highlighter [file]
 ```
 
 Reads standard input by default, you can pass filename to make it read from file.

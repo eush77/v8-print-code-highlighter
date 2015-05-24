@@ -36,8 +36,10 @@
     "print"
   ],
   "dependencies": {
+    "camelcase-keys": "^1.0.0",
     "help-version": "^0.2.0",
     "highlight.js": "^8.6.0",
+    "minimist": "^1.1.1",
     "normalize-css": "^2.3.1",
     "parse-concat-stream": "^0.2.0",
     "v8-code-dump-parser": "^0.1.0"
