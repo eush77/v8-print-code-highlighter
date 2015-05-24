@@ -10,12 +10,21 @@ var fs = require('fs'),
     path = require('path');
 
 
+var resolveTheme = function (theme) {
+  try {
+    return require.resolve(path.join('highlight.js/styles', theme + '.css'));
+  }
+  catch (e) {
+    throw new Error('Theme not found: ' + theme);
+  }
+};
+
+
 var writeStyles = function (theme, out) {
   out.write(normalizeCss);
   out.write('pre { margin: 0; }');
 
-  var themeFile = require.resolve(path.join('highlight.js/styles', theme + '.css'));
-  fs.createReadStream(themeFile, { encoding: 'utf8' })
+  fs.createReadStream(resolveTheme(theme), { encoding: 'utf8' })
     .pipe(out);
 };
 
