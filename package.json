@@ -10,6 +10,7 @@
   },
   "files": [
     "cli.js",
+    "index.js",
     "src/"
   ],
   "homepage": "https://github.com/eush77/v8-print-code-highlighter",
