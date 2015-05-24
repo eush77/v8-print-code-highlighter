@@ -32,7 +32,7 @@ Usage:  v8-print-code-highlighter [[--theme | -t] theme] [file]
         v8-print-code-highlighter --list-themes
 ```
 
-Reads standard input by default, you can pass filename to make it read from file.
+Reads standard input by default, you can pass filename to make it read from file instead.
 
 Spits out highlighted HTML. Use [bcat][bcat] or something similar to redirect the output to a browser tab, or just save to file and open manually.
 
