@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 
-var highlightSection = require('./src/highlight-section');
+var highlight = require('./');
 
 var codeDumpParser = require('v8-code-dump-parser'),
     helpVersion = require('help-version')(usage()),
     concat = require('parse-concat-stream'),
-    normalizeCss = require('normalize-css/normalize'),
     minimist = require('minimist'),
     camelCaseKeys = require('camelcase-keys');
 
@@ -38,18 +37,6 @@ var options = camelCaseKeys(minimist(process.argv.slice(2), {
 
   input.pipe(concat({ parse: codeDumpParser }, function (err, sections) {
     if (err) throw err;
-
-    sections.forEach(highlightSection);
-
-    process.stdout.write([
-      '<style>',
-      normalizeCss,
-      fs.readFileSync(require.resolve('highlight.js/styles/solarized_dark.css'),
-                      { encoding: 'utf8' }),
-      '</style>',
-      '<pre class="hljs">',
-      codeDumpParser.stringify(sections),
-      '</pre>'
-    ].join(''));
+    process.stdout.write(highlight(sections));
   }));
 }());
