@@ -37,6 +37,6 @@ var options = camelCaseKeys(minimist(process.argv.slice(2), {
 
   input.pipe(concat({ parse: codeDumpParser }, function (err, sections) {
     if (err) throw err;
-    process.stdout.write(highlight(sections));
+    highlight(sections).pipe(process.stdout);
   }));
 }());
