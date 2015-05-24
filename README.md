@@ -40,7 +40,7 @@ Spits out highlighted HTML. Use [bcat][bcat] or something similar to redirect th
 
 ## API
 
-### `printCodeHighlighter(sections, opts)`
+### `printCodeHighlighter(sections, [opts])`
 
 - `sections` — parse tree in [v8-code-dump-parser][v8-code-dump-parser] format. Note that current implementation rewrites sections' content along the way.
 - `opts.theme` — optional theme name.

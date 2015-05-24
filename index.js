@@ -35,6 +35,7 @@ var writeBody = function (sections, out) {
 
 
 module.exports = function (sections, opts) {
+  opts = opts || {};
   opts.theme = opts.theme || 'default';
   sections.forEach(highlightSection);
 
