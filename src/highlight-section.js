@@ -1,6 +1,8 @@
 'use strict';
 
-var hljs = require('highlight.js');
+var patchX86 = require('./patch-x86');
+
+var hljs = patchX86(require('highlight.js'));
 
 
 var asmLanguages = ['armasm', 'avrasm', 'x86asm'];

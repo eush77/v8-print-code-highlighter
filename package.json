@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "camelcase-keys": "^1.0.0",
+    "flatmap": "0.0.3",
     "help-version": "^0.2.0",
     "highlight.js": "^8.6.0",
     "minimist": "^1.1.1",
